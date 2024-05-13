@@ -1,0 +1,47 @@
+[gd_scene load_steps=10 format=3 uid="uid://gg6ib1gxwx76"]
+
+[ext_resource type="Script" path="res://Character.gd" id="1_rl2fl"]
+[ext_resource type="Texture2D" uid="uid://b70hgwar8ehik" path="res://Treasure Hunters 2/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 01.png" id="2_h54mj"]
+[ext_resource type="Texture2D" uid="uid://dkqolxdvgcg8k" path="res://Treasure Hunters 2/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 02.png" id="3_jc2mk"]
+[ext_resource type="Texture2D" uid="uid://cvcrm5ij2br1s" path="res://Treasure Hunters 2/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 03.png" id="4_74o2s"]
+[ext_resource type="Texture2D" uid="uid://djlnorrbex853" path="res://Treasure Hunters 2/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 04.png" id="5_s00lc"]
+[ext_resource type="Texture2D" uid="uid://d2wbqv7c2s05p" path="res://Treasure Hunters 2/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 05.png" id="6_a7gjk"]
+[ext_resource type="Texture2D" uid="uid://b7c3avkcvoq7s" path="res://Treasure Hunters 2/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/10-Run Sword/Run Sword 06.png" id="7_bw3qa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kb8u1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h54mj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jc2mk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_74o2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s00lc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a7gjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bw3qa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_giukx"]
+radius = 18.0278
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_rl2fl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kb8u1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_giukx")
